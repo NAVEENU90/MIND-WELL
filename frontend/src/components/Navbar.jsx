@@ -70,13 +70,24 @@ const Navbar = () => {
             </div>
           </div>
         ) : (
-          <button
-            onClick={() => navigate("/login")}
-            className="bg-primary text-white px-8 py-3 rounded-full hidden md:block"
-          >
-            Create Account
-          </button>
-        )}
+  <div className="flex items-center gap-2">
+    <button
+      onClick={() =>
+        window.open("https://mind-well-admin.vercel.app", "_blank")
+      }
+      className="border border-primary text-primary px-5 py-3 rounded-full hidden md:block"
+    >
+      Admin Login
+    </button>
+
+    <button
+      onClick={() => navigate("/login")}
+      className="bg-primary text-white px-8 py-3 rounded-full hidden md:block"
+    >
+      Create Account
+    </button>
+  </div>
+)}
         <img
           onClick={() => setShowMenu(true)}
           className="w-6 md:hidden"
